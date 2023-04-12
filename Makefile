@@ -1,11 +1,11 @@
 NAME = test
 CC = gcc
-SRCS = srcs/test.c srcs/draw.c srcs/render.c
+SRCS = srcs/test.c srcs/draw.c srcs/render.c srcs/utils.c srcs/read.c
 OBJS = $(SRC:.c=.o)
 COMP = -Wall -Wextra -Werror -I/usr/include -Imlx_linux -O3
 LINK = -Lmlx_linux -lmlx_Linux -L/usr/lib -Imlx_linux -lXext -lX11 -lm -lz
 
-all: $(NAME)
+all: fclean $(NAME)
 	@echo Done!
 
 $(NAME):
