@@ -6,7 +6,7 @@
 /*   By: bahadir yigit <bahadiryigit0307@gmail.c    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/04/10 04:05:33 by bahadir yig       #+#    #+#             */
-/*   Updated: 2023/04/13 15:17:03 by bahadir yig      ###   ########.fr       */
+/*   Updated: 2023/04/13 20:58:07 by bahadir yig      ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -20,8 +20,6 @@ void	ft_clear(t_img *data)
 	data->img = mlx_new_image(data->mlx, data->width * data->zoom, data->height * data->zoom);
 	data->addr = mlx_get_data_addr(data->img, &data->bpp, &data->line_length,
 			&data->endian);
-	data->y += .01;
-	data->x += .01;
 }
 
 void	ft_render_map(t_img *data)

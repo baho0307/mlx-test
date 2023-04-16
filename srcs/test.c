@@ -6,7 +6,7 @@
 /*   By: bahadir yigit <bahadiryigit0307@gmail.c    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/04/10 01:38:46 by bahadir yig       #+#    #+#             */
-/*   Updated: 2023/04/13 15:04:54 by bahadir yig      ###   ########.fr       */
+/*   Updated: 2023/04/13 20:57:49 by bahadir yig      ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -38,8 +38,6 @@ int	main(int argc, char *argv[])
 	printf("%d\n", img.height);
 	if (img.map)
 	{
-		//ft_render_map(&img);
-		//mlx_put_image_to_window(img.mlx, img.mlx_win, &img.img, 0, 0);
 		mlx_loop_hook(img.mlx, render_next_frame, &img);
 		mlx_loop(img.mlx);
 		free(img.img);
